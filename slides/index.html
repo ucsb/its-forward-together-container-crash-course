@@ -178,13 +178,30 @@ $ curl -X POST "http://localhost:3000/?name=Moomin"
                 </section>
 
                 <section data-background="#047C91" data-background-transition="zoom">
-                    <h2 class="r-fit-text">Kubernetes Basics</h2>;
+                    <h2 class="r-fit-text">Kubernetes Basics</h2>
                 </section>
 
                 <section data-background="#047C91">
                     <section>
                         <h2>Declarative <em>Desired State</em></h2>
                         <p class="fragment">OR... what if your job wasn't to maintain servers, and instead you wrote YAML files.</p>
+                    </section>
+                    <section>
+                        <pre data-id="code-animation"><code class="hljs yaml" data-trim data-line-numbers>
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl:5.34.0
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+      restartPolicy: Never
+  backoffLimit: 4
+                        </pre></code>
                     </section>
                     <section>
                         <pre data-id="code-animation"><code class="hljs yaml" data-trim data-line-numbers>
