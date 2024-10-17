@@ -25,8 +25,8 @@ spec:
   targetNamespace: kube-system
   values:
     settings:
-      clusterName: infra
-      interruptionQueue: infra
+      clusterName: workshop
+      interruptionQueue: workshop
     controller:
       resources:
         requests:
