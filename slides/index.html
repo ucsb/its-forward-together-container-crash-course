@@ -145,12 +145,12 @@
                 </section>
 
                 <section data-background="#6D7D33">
-                    <section>
-                        <h2>Multi-container Applications</h2>
-                    </section>
+                    <h2>Multi-container Applications</h2>
+                </section>
 
+                <section data-background="#003660" data-background-transition="zoom">
                     <section>
-                        <h2>Docker Compose</h2>
+                        <h2>Exercise 3: Docker Compose</h2>
 
                         <aside class="notes"><a href="https://docs.docker.com/compose/">docker-compose</a></aside>
                     </section>
@@ -158,7 +158,7 @@
                         <pre data-id="code-animation"><code class="hljs yaml" data-trim data-line-numbers>
 services:
   web:
-    build: .
+    build: ../exercise2
     ports:
       - "3000:3000"
   redis:
@@ -167,6 +167,7 @@ services:
                     </section>
                     <section>
                         <pre data-id="code-animation"><code class="hljs sh" data-trim data-line-numbers>
+$ cd ../exercise3
 $ docker compose up --build
                         </pre></code>
 

@@ -1,0 +1,7 @@
+services:
+  web:
+    build: ../exercise2
+    ports:
+      - "3000:3000"
+  redis:
+    image: "redis:alpine"
