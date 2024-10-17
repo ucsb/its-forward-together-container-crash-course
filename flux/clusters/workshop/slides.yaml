@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: slides
+  namespace: default
+  labels:
+    app: slides
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: slides
+  template:
+    metadata:
+      labels:
+        app: slides
+    spec:
+      containers:
+      - name: slides
+        image: 619984000261.dkr.ecr.us-west-2.amazonaws.com/container-slides:v1
+        ports:
+        - containerPort: 8001
