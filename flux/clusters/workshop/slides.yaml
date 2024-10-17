@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: slides
-        image: 619984000261.dkr.ecr.us-west-2.amazonaws.com/container-slides:v2
+        image: 619984000261.dkr.ecr.us-west-2.amazonaws.com/container-slides:v3
         ports:
         - containerPort: 8001
